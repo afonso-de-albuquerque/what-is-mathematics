@@ -190,9 +190,57 @@ $$
 >
 > *8\) $1^2 + 3^2 + 5^2 + \dots + (2n+1)^2 = \frac{(n+1)(2n+1)(2n+3)}{3}$.
 
+$$
+\begin{aligned}
+1^2 + 2^2 + 3^2 + \dots + n^2 &= \frac{n(n+1)(2n+1)}{6} \quad \text{formula (4)} \\
+4(1^2 + 2^2 + 3^2 + \dots + n^2) &= \frac{4n(n+1)(2n+1)}{6} \\
+2^2 + 4^2 + 6^2 + \dots + (2n)^2 &= \frac{4n(n+1)(2n+1)}{6} \\
+1^2 + 2^2 + 3^2 + \dots + (2n+1)^2 &= \frac{(2n+1)(2n+2)(4n+3)}{6} \quad \text{from formula (4)} \\
+1^2 + 3^2 + 5^2 + \dots + (2n+1)^2 &= \frac{(2n+1)(2n+2)(4n+3)}{6} - \frac{4n(n+1)(2n+1)}{6} \\
+&= \frac{(2n+1)\left((2n+2)(4n+3)-4n(n+1)\right)}{6} \\
+&= \frac{(2n+1)(8n^2+14n+6-4n^2-4n)}{6} \\
+&= \frac{(2n+1)(4n^2+10n+6)}{6} = \frac{(2n+1)(2n^2+5n+3)}{3} \\
+&= \frac{(n+1)(2n+1)(2n+3)}{3}
+\end{aligned}
+$$
+
 > *9\) $1^3 + 3^3 + 5^3 + \dots + (2n+1)^3 = (n+1)^2(2n^2+4n+1)$.
 
+$$
+\begin{aligned}
+1^3 + 2^3 + 3^3 + \dots + n^3 &= \left(\frac{n(n+1)}{2}\right)^2 \quad \text{formula (5)} \\
+8(1^3 + 2^3 + 3^3 + \dots + n^3) &= 8\left(\frac{n(n+1)}{2}\right)^2 \\
+2^3 + 4^3 + 6^3 + \dots + (2n)^3 &= 2n^2(n+1)^2 \\
+1^3 + 2^3 + 3^3 + \dots + (2n+1)^3 &= \left(\frac{(2n+1)(2n+2)}{2}\right)^2 \quad \text{from formula (5)} \\
+1^3 + 3^3 + 5^3 + \dots + (2n+1)^3 &= \left(\frac{(2n+1)(2n+2)}{2}\right)^2 - 2n^2(n+1)^2 \\
+&= (2n+1)^2(n+1)^2 - 2n^2(n+1)^2 \\
+&= (n+1)^2(2n^2+4n+1)
+\end{aligned}
+$$
+
 > 10\) Prove the same results directly by mathematical induction.
+
+$$
+\begin{aligned}
+1^2 + 3^2 &= \frac{2\cdot3\cdot5}{3} \quad \text{when } n=1 \\
+f(r+1) &= f(r) + (2r+3)^2 \\
+&= \frac{(r+1)(2r+1)(2r+3)}{3} + (2r+3)^2 \\
+&= \frac{(2r+3)(2r^2+3r+1+6r+9)}{3} = \frac{(2r+3)(2r^2+9r+10)}{3} \\
+&= \frac{(r+2)(2r+3)(2r+5)}{3}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+1^3 + 3^3 &= (1+1)^2(2\cdot1^2+4\cdot1+1) \quad \text{when } n=1 \\
+f(r+1) &= f(r) + (2r+3)^3 \\
+&= (r+1)^2(2r^2+4r+1) + (2r+3)^3 \\
+&= (r^2+2r+1)(2r^2+4r+1) + (2r+3)^3 \\
+&= (2r^4+4r^3+r^2+4r^3+8r^2+2r+2r^2+4r+1) + (8r^3+36r^2+54r+27) \\
+&= 2r^4 + 16r^3 + 47r^2 + 60r + 28 = (r^2+4r+4)(2r^2+8r+7) \\
+&= (r+2)^2\left(2(r+1)^2+4(r+1)+1\right)
+\end{aligned}
+$$
 
 ### *7. Further Remarks on Mathematical Induction. 再谈数学归纳法
 
@@ -202,13 +250,102 @@ $$
 
 ### 1. Fundamental Facts. 基本事实
 
+> (Page 23) *Exercise:* Carry out this construction starting with $p_1=2$, $p_2=3$ and find 5 more primes.
+
+$$
+\begin{aligned}
+2 \cdot 3 + 1 &= 7 \text{ is a prime} \\
+2 \cdot 3 \cdot 7 + 1 &= 43 \text{ is a prime} \\
+2 \cdot 3 \cdot 7 \cdot 43 + 1 &= 1807 = 13 \cdot 139 \quad \text{13 and 139 are primes} \\
+2 \cdot 3 \cdot 7 \cdot 13 \cdot 43 \cdot 139 + 1 &= 3263443 \text{ is a prime}
+\end{aligned}
+$$
+
+Answer: 5 more primes are $7, 13, 43, 139, 3263443$.
+
+> (Page 25) *Exercise:* In order to find all the divisors of any number $a$ we need only decompose $a$ into a product
+>
+> $$
+> a = p_1^{\alpha_1} \cdot p_2^{\alpha_2} \dots p_r^{\alpha_r},
+> $$
+>
+> where the $p$'s are distinct primes, each raised to a certain power. *All* the divisors of $a$ are the numbers
+>
+> $$
+> b = p_1^{\beta_1} \cdot p_2^{\beta_2} \dots p_r^{\beta_r},
+> $$
+>
+> where the $\beta$'s are any integers satisfying the inequalities
+>
+> $$
+> 0 \leq \beta_1 \leq \alpha_1, 0 \leq \beta_2 \leq \alpha_2, \dots, 0 \leq \beta_r \leq \alpha_r.
+> $$
+>
+> Prove this statement. As a consequence, show that the number of different divisors of $a$ (including the divisors $a$ and $1$) is  given by the product
+>
+> $$
+> (\alpha_1 + 1)(\alpha_2 + 1) \dots (\alpha_r + 1).
+> $$
+>
+> For example,
+>
+> $$
+> 144 = 2^4 \cdot 3^2
+> $$
+>
+> has $5\cdot3$ divisors. They are $1, 2, 4, 8, 16, 3, 6, 12, 24, 48, 9, 18, 36, 72, 144$.
+
+> (Page 25) *Exercise:* Prove the corresponding theorem for the progressions $6n+5$
+
 ### 2. The Distribution of the Primes. 素数的分布
 
 ## § 2. Congruences. 同余
 
 ### 1. General Concepts. 一般概念
 
+> (Page 35) *Exercise:* Find a similar rule for divisibility by 13.
+
+$$
+\begin{aligned}
+10 \equiv -3, 10^2 \equiv -4, 10^3 \equiv -1, 10^4 \equiv 3, 10^5 \equiv 4, 10^6 \equiv 1 \\
+r = a_0 - 3a_1 - 4a_2 - a_3 + 3a_4 + 4a_5 + a_6 - 3a_7 - \dots
+\end{aligned}
+$$
+
+> (Page 36) *Exercise:* Show that the following *law of cancellation* holds for congruences with respect to a prime modulus:
+>
+> If $ab \equiv ac$ and $a \not\equiv 0$, then $b \equiv c $.
+
+$$
+\begin{aligned}
+ab \equiv ac \implies ab - ac \equiv 0 \implies a(b-c) \equiv 0 \implies a \equiv 0 \text{ or } b - c \equiv 0 \\
+\text{Since } a \not\equiv 0, \text{then } b - c \equiv 0 \implies b \equiv c.
+\end{aligned}
+$$
+
+> (Page 36) *Exercise:* 1\) To what number between $0$ and $6$ inclusive is the product $11\cdot18\cdot2322\cdot13\cdot19$ congruent modulo $7$?
+
+$$
+(-3) \cdot (-3) \cdot (-2) \cdot (-1) \cdot (-2) = -36 \equiv 6 \pmod{7}
+$$
+
+> 2\) To what number between $0$ and $12$ inclusive is $3\cdot7\cdot11\cdot17\cdot19\cdot23\cdot29\cdot113$ congruent modulo $13$?
+
+> 3\) To what number between $0$ and $4$ inclusive is the sum $1 + 2 + 2^2 + \dots + 2^{19}$ congruent modulo $5$?
+
 ### 2. Fermat’s Theorem. 费马定理
+
+> (Page 38) *Exercise:* 1\) Show by similar computation that $2^8 \equiv 1 \pmod{17}$; $3^8 \equiv -1 \pmod{17}$; $3^{14} \equiv -1 \pmod{29}$; $2^{14} \equiv -1 \pmod{29}$; $4^{14} \equiv 1 \pmod{29}$; $5^{14} \equiv 1 \pmod{29}$.
+
+> 2\) Check Fermat's theorem for $p = 5, 7, 11, 17$, and $23$ with different values of $a$.
+
+> 3\) Prove the general theorem: The smallest positive integer $e$ for which $a^e \equiv 1 \pmod{p}$ must be a divisor of $p-1$. (Hint: Divide $p-1$ by $e$, obtaining
+>
+> $$
+> p - 1 = ke + r
+> $$
+>
+> where $0 \leq r < e$, and use the fact that $a^{p-1} \equiv a^e \equiv 1 \pmod{p}$.)
 
 ### 3. Quadratic Residues. 二次剩余
 
