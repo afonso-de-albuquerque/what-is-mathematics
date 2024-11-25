@@ -349,64 +349,60 @@ $$
 
 ### 3. Quadratic Residues. 二次剩余
 
+> (Page 40) *Exercise:* 1. $6^2 = 36 \equiv 13 \pmod{23}$. Is 23 a quadratic residue $\pmod{13}$?
+
+> 2. We have seen that $x^2 \equiv (p-x)^2 \pmod{p}$. Show that these are the only congruences among the numbers $1^2, 2^2, 3^2, \dotsc, (p-1)^2$.
+
 ## § 3. Pythagorean Numbers and Fermat’s Last Theorem. 毕达哥拉斯数和费马大定理
+
+> (Page 41) *Exercise:* Prove the last statement.
 
 ## § 4. The Euclidean Algorithm. 欧几里得辗转相除法
 
 ### 1. General Theory. 一般理论
 
+> (Page 45) *Exercise:* Carry out the Euclidean algorithm for finding the greatest common divisor of (a) $187, 77$. (b) $105, 385$. (c) $245, 193$.
+
 ### 2. Application to the Fundamental Theorem of Arithmetic. 在算术基本定理上的应用
 
-### 3. Euler’s Function φ Function Fermat’s Theorem Again. 欧拉函数φ 再谈费马定理
+> (Page 47) *Exercise:* The extension of this argument to products of any number $n$ of integers requires the explicit or implicit use of the principle of mathematical induction. Supply the details of this argument.
+
+### 3. Euler’s $\varphi$ Function. Fermat’s Theorem Again. 欧拉函数φ 再谈费马定理
+
+> (Page 48) *Exercise:* Prove the theorem: *If an integer* $r$ *divides a product* $ab$ *and is relatively prime to* $a$, *then* $r$ *must divide* $b$. (Hint: if $r$ is relatively prime to $a$ then we can find integers $k$ and $l$ such that
+>
+> $$
+> kr + al = 1.
+> $$
+>
+> Multiply both sides of this equation by $b$.) This theorem includes the lemma of page 46 as a special case, since a prime $p$ is relatively prime to an integer $a$ if and only if $p$ does not divide $a$.
+
+$$
+kr + al = 1 \implies krb + lab = b \\
+$$
+
+Since $r$ divides $krb$ and $lab$ respectively, $r$ must divide the sum $krb + lab = b$.
+
+> (Page 49) *Exercise:* Using Euler's $\varphi$ function, generalize Fermat's theorem of page 37. The general theorem state: *If* $n$ *is any integer, and* $a$ *is relatively prime to* $n$, *then*
+>
+> $$
+> a^{\varphi(n)} \equiv 1 \pmod{n}.
+> $$
 
 ### 4. Continued Fractions. Diophantine Equations. 连分数 丢番都方程
 
-# CHAPTER II. THE NUMBER SYSTEM OF MATHEMATICS 第二章 数学中的数系
+> (Page 50) *Exercise:* Find the continued fraction developments of
+>
+> $$
+> \frac{2}{5}, \frac{43}{30}, \frac{169}{70}
+> $$
 
-## § 1. The Rational Numbers. 有理数
+$$
+\begin{aligned}
+\frac{2}{5} &= \frac{1}{2 + \frac{1}{2}} \\
+\frac{43}{30} &= 1 + \frac{1}{2 + \frac{1}{3 + \frac{1}{4}}} \\
+\frac{169}{70} &= 2 + \frac{1}{2 + \frac{1}{2 + \frac{1}{2 + \frac{1}{\frac{1}{2 + \frac{1}{2}}}}}}
+\end{aligned}
+$$
 
-### 1. Rational Numbers as a Device for Measuring. 作为度量工具的有理数
-
-### 2. Intrinsic Need for the Rational Numbers. Principle of Generalization. 数学内部对有理数的需要 推广原则
-
-### 3. Geometrical Interpretation of Rational Numbers. 有理数的几何解释
-
-## § 2. Incommensurable Segments, Irrational Numbers, and the Concept of Limit. 不可公度线段 无理数和极限概念
-
-### 1. Introduction. 引言
-
-### 2. Decimal Fractions. Infinite Decimals. 十进位小数 无穷小数
-
-### 3. Limits. Infinite Geometrical Series. 极限 无穷等比级数
-
-### 4. Rational Numbers and Periodic Decimals. 有理数和循环小数
-
-### 5. General Definition of Irrational Numbers by Nested Intervals. 用区间套给出无理数的一般定义
-
-### *6. Alternative Methods of Defining Irrational Numbers. Dedekind Cuts. 定义无理数的另一个方法 戴德金分割
-
-## § 3. Remarks on Analytic Geometry. 解析几何概述
-
-### 1. The Basic Principle. 基本原理
-
-### *2. Equations of Lines and Curves. 直线方程和曲线方程
-
-## § 4. The Mathematical Analysis of Infinity. 无限的数学分析
-
-### 1. Fundamental Concepts. 基本概念
-
-### 2. The Denumerability of the Rational Numbers and the Non-Denumerability of the Continuum. 有理数的可数性和连续统的不可数性
-
-### 3. Cantor’s “Cardinal Numbers”. 康托的“基数”
-
-### 4. The Indirect Method of Proof. 反证法
-
-### 5. The Paradoxes of the Infinite. 有关无限的悖论
-
-### 6. The Foundations of Mathematics. 数学的基础
-
-## § **5. C**omplex Numbers. 复数
-
-### 1. The Origin of Complex Numbers. 复数的起源
-
-### 2. The Geometrical Interpretation of Complex Numbers. 复数的几何解释
+> (Page 51) *Exercise:* Solve the Diophantine equations (a) $3x - 4y = 29$. (b) $11x - 12y = 58$. (c) $153x - 34y = 51$.
