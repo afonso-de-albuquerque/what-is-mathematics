@@ -400,9 +400,29 @@ Answer: 5 more primes are $7, 13, 43, 139, 3263443$.
 >
 > has $5\cdot3$ divisors. They are $1, 2, 4, 8, 16, 3, 6, 12, 24, 48, 9, 18, 36, 72, 144$.
 
-> (Page 25) *Exercise:* Prove the corresponding theorem for the progressions $6n+5$
+If $a = 1$, then $a$ has only one divisor, which is $1$. Each $\alpha_i = 0$ and each $\beta_i = 0$. Therefore the statement is true for $a = 1$.
+
+If $a > 1$, then according to the Fundamental Theorem of Arithmetic, $a$ can be factored into a product of primes in only one way, which is $a = p_1^{\alpha_1} \cdot p_2^{\alpha_2} \dots p_r^{\alpha_r}$, where $p_1, p_2, \dots, p_r$ are distinct primes and each $\alpha_i$ is a positive integer. Therefore, $a$ has no other prime factors than $p_1, p_2, \dots, p_r$. Its divisors, being able to divide $a$, must also have no other prime factors than $p_1, p_2, \dots, p_r$. Therefore, all the divisors can be factored into the form $p_1^{\beta_1} \cdot p_2^{\beta_2} \dots p_r^{\beta_r}$. Any divisor must satisfy that $\beta_i \geq 0$, since otherwise the divisor is not an integer. Any divisor must also satisfy that $\beta_i \leq \alpha_i$, since otherwise the divisor has at least one prime factor $p_i$ that has a higher power than $a$, causing it unable to divide $a$. Therefore the statement is true for $a > 1$ too.
+
+Each $\beta_i$ can take $\alpha_i + 1$ possible values ($0, 1, 2, \dotsc, \alpha_i$). Therefore the number of different divisors of $a$ is $(\alpha_1 + 1)(\alpha_2 + 1) \dots (\alpha_r + 1)$.
 
 ### 2. The Distribution of the Primes. 素数的分布
+
+> (Page 25) *Exercise:* Prove the corresponding theorem for the progressions $6n+5$.
+
+Any prime greater than $2$ is odd and hence is of the form $6n+1$, $6n+3$, or $6n+5$. However, $6n+3$ is divisible by $3$, so it cannot be a prime. Therefore any prime greater than $2$ can only be of the form $6n+1$ or $6n+5$. Furthermore, the product of two numbers of the form $6n+1$ is again of that form, since
+
+$$
+(6a + 1)(6b + 1) = 36ab + 6a + 6b + 1 = 6(6ab + a + b) + 1.
+$$
+
+Suppose there were but a finite number of primes, $p_1, p_2, \dotsc, p_n$ of the form $6n+5$, and consider the number
+
+$$
+N = 6(p_1 p_2 \dots p_n) - 1 = 6(p_1 p_2 \dots p_n - 1) + 5.
+$$
+
+Either $N$ is itself a prime, or it may be decomposed into a product of primes, none of which can be $p_1, p_2, \dotsc, p_n$, since these divide $N$ with a remainder $-1$. Furthermore, all the prime factors of $N$ cannot be of the form $6n+1$, for $N$ is not of that form and, as we have seen, the product of numbers of the form $6n+1$ is again of the form. Hence at least one prime factor must be of the form $6n+5$, which is impossible, since we saw that none of the $p$'s, which we supposed to be *all* the primes of the form $6n+5$, can be a factor of $N$. Therefore the assumption that the number of primes of the form $6n+5$ is finite has led to a contradiction, and hence the number of such primes must be infinite.
 
 ## § 2. Congruences. 同余
 
