@@ -456,7 +456,18 @@ $$
 
 > 2\) To what number between $0$ and $12$ inclusive is $3\cdot7\cdot11\cdot17\cdot19\cdot23\cdot29\cdot113$ congruent modulo $13$?
 
+$$
+3 \cdot (-6) \cdot (-2) \cdot 4 \cdot 6 \cdot (-3) \cdot 3 \cdot (-4) = 144 \cdot 216 \equiv 1 \cdot (-5) \equiv 8 \pmod{13}
+$$
+
 > 3\) To what number between $0$ and $4$ inclusive is the sum $1 + 2 + 2^2 + \dots + 2^{19}$ congruent modulo $5$?
+
+$$
+\begin{aligned}
+1 + 2 + 2^2 + \dots + 2^{19} &= \frac{1-2^{20}}{1-2} = 2^{20} - 1 = (2^4)^5 - 1 \\
+&= 16^5 - 1 \equiv 1^5 - 1 \equiv 0 \pmod{5}
+\end{aligned}
+$$
 
 ### 2. Fermat’s Theorem. 费马定理
 
