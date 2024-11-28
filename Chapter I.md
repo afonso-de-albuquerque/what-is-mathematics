@@ -473,7 +473,53 @@ $$
 
 > (Page 38) *Exercise:* 1\) Show by similar computation that $2^8 \equiv 1 \pmod{17}$; $3^8 \equiv -1 \pmod{17}$; $3^{14} \equiv -1 \pmod{29}$; $2^{14} \equiv -1 \pmod{29}$; $4^{14} \equiv 1 \pmod{29}$; $5^{14} \equiv 1 \pmod{29}$.
 
+$$
+2^2 \equiv 4, 2^4 \equiv -1, 2^8 \equiv 1 \pmod{17}
+$$
+
+$$
+3^2 \equiv -8, 3^4 \equiv -4, 3^8 \equiv -1 \pmod{17}
+$$
+
+$$
+3^2 \equiv 9, 3^4 \equiv -6, 3^8 \equiv 7, 3^{14} = 3^2 \cdot 3^4 \cdot 3^8 \equiv -1 \pmod{29}
+$$
+
+$$
+2^2 \equiv 4, 2^4 \equiv -13, 2^8 \equiv -5, 2^{14} = 2^2 \cdot 2^4 \cdot 2^8 \equiv -1 \pmod{29}
+$$
+
+$$
+4^{14} = (2^{14})^2 \equiv (-1)^2 \equiv 1 \pmod{29}
+$$
+
+$$
+5^2 \equiv -4, 5^4 \equiv -13, 5^8 \equiv -5, 5^{14} = 5^2 \cdot 5^4 \cdot 5^8 \equiv 1 \pmod{29}
+$$
+
 > 2\) Check Fermat's theorem for $p = 5, 7, 11, 17$, and $23$ with different values of $a$.
+
+$$
+2^4 = 16 \equiv 1, 3^4 = 81 \equiv 1 \pmod{5}
+$$
+
+$$
+2^6 = 64 \equiv 1, 3^6 = 729 \equiv 1 \pmod{7}
+$$
+
+$$
+\begin{aligned}
+2^{10} = (2^5)^2 = 32^2 \equiv (-1)^2 &\equiv 1 \pmod{11} \\
+3^{10} = (3^2)^5 \equiv (-2)^5 \equiv -33 &\equiv 1 \pmod{11}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+2^{16} = (2^4)^4 = 16^4 \equiv (-1)^4 &\equiv 1 \pmod{17} \\
+3^{16} = ((3^4)^2)^2 = (81^2)^2 \equiv ((-4)^2)^2 \equiv (-1)^2 &\equiv 1 \pmod{17}
+\end{aligned}
+$$
 
 > 3\) Prove the general theorem: The smallest positive integer $e$ for which $a^e \equiv 1 \pmod{p}$ must be a divisor of $p-1$. (Hint: Divide $p-1$ by $e$, obtaining
 >
@@ -482,6 +528,15 @@ $$
 > $$
 >
 > where $0 \leq r < e$, and use the fact that $a^{p-1} \equiv a^e \equiv 1 \pmod{p}$.)
+
+$$
+\begin{aligned}
+a^{p-1} \equiv 1 \implies a^{ke+r} \equiv 1 \implies (a^e)^k \cdot a^r \equiv 1 \pmod{p} \\
+\text{Since } a^e \equiv 1 \text{, then } a^r \equiv 1 \pmod{p}
+\end{aligned}
+$$
+
+Since $e$ is the smallest positive integer such that $a^e \equiv 1 \pmod{p}$ and $0 \leq r < e$, then $r = 0$. Therefore $(p-1) = ke$ and $e$ must be a divisor of $p-1$.
 
 ### 3. Quadratic Residues. 二次剩余
 
@@ -503,7 +558,7 @@ $$
 
 > (Page 47) *Exercise:* The extension of this argument to products of any number $n$ of integers requires the explicit or implicit use of the principle of mathematical induction. Supply the details of this argument.
 
-### 3. Euler’s $\varphi$ Function. Fermat’s Theorem Again. 欧拉函数φ 再谈费马定理
+### 3. Euler’s $\varphi$ Function. Fermat’s Theorem Again. 欧拉函数$\varphi$ 再谈费马定理
 
 > (Page 48) *Exercise:* Prove the theorem: *If an integer* $r$ *divides a product* $ab$ *and is relatively prime to* $a$, *then* $r$ *must divide* $b$. (Hint: if $r$ is relatively prime to $a$ then we can find integers $k$ and $l$ such that
 >
