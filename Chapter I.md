@@ -540,9 +540,11 @@ Since $e$ is the smallest positive integer such that $a^e \equiv 1 \pmod{p}$ and
 
 ### 3. Quadratic Residues. 二次剩余
 
-> (Page 40) *Exercise:* 1. $6^2 = 36 \equiv 13 \pmod{23}$. Is 23 a quadratic residue $\pmod{13}$?
+> (Page 40) *Exercise:* 1\) $6^2 = 36 \equiv 13 \pmod{23}$. Is 23 a quadratic residue $\pmod{13}$?
 
-> 2. We have seen that $x^2 \equiv (p-x)^2 \pmod{p}$. Show that these are the only congruences among the numbers $1^2, 2^2, 3^2, \dotsc, (p-1)^2$.
+Since $13 \equiv 6^2 \pmod{23}$, $13$ is a quadratic residue $\pmod{23}$. Since the product $\left( \frac{13-1}{2} \right) \cdot \left( \frac{23-1}{2} \right) = 6 \cdot 11$ is even, according to the Law of Quadratic Reciprocity, $23$ is a quadratic residue $\pmod{13}$. In confirmation of this, we observe that $23 \equiv 6^2 \pmod{13}$.
+
+> 2\) We have seen that $x^2 \equiv (p-x)^2 \pmod{p}$. Show that these are the only congruences among the numbers $1^2, 2^2, 3^2, \dotsc, (p-1)^2$.
 
 ## § 3. Pythagorean Numbers and Fermat’s Last Theorem. 毕达哥拉斯数和费马大定理
 
