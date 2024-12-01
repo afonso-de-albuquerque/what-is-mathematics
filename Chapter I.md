@@ -546,6 +546,16 @@ Since $13 \equiv 6^2 \pmod{23}$, $13$ is a quadratic residue $\pmod{23}$. Since 
 
 > 2\) We have seen that $x^2 \equiv (p-x)^2 \pmod{p}$. Show that these are the only congruences among the numbers $1^2, 2^2, 3^2, \dotsc, (p-1)^2$.
 
+Let $x$ be any integer among $1, 2, 3, \dotsc, p-1$, and we have $x^2 \equiv (p-x)^2 \pmod{p}$. Since $p$ is odd, $p-x \neq x$. Therefore there exist at least one integer $(p-x)^2$ among the numbers $1^2, 2^2, 3^2, \dotsc, (p-1)^2$ that is congruent to $x^2$.
+
+Suppose $y^2$ is one integer congruent to $x^2$, where $y$ is among the numbers $1, 2, 3, \dotsc, p-1$ and $y \neq x$. Then we have:
+
+$$
+y^2 \equiv x^2 \implies y^2 - x^2 \equiv 0 \implies (y-x)(y+x) \equiv 0 \pmod{p}
+$$
+
+Since $y \neq x$, and $x, y$ are both among the numbers $1, 2, 3, \dotsc, p-1$, then $y \equiv -x \pmod{p}$, then $y - x \not\equiv 0 \pmod{p}$. Therefore $y + x \equiv 0 \implies y \equiv -x \pmod{p}$. The only possible value of $y$ among the numbers $1, 2, 3, \dotsc, p-1$ is $y = p-x$. Therefore the only congruences among the numbers $1^2, 2^2, 3^2, \dotsc, (p-1)^2$ are $x^2 \equiv (p-x)^2 \pmod{p}$.
+
 ## § 3. Pythagorean Numbers and Fermat’s Last Theorem. 毕达哥拉斯数和费马大定理
 
 > (Page 41) *Exercise:* Prove the last statement.
