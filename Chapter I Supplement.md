@@ -241,9 +241,25 @@ As a result, $a = v^2 - u^2$, $b = 2uv$, and $c = u^2 + v^2$ have no common fact
 
 > (Page 45) *Exercise:* Carry out the Euclidean algorithm for finding the greatest common divisor of (a) $187, 77$. (b) $105, 385$. (c) $245, 193$.
 
+$$
+(187, 77) = (77, 33) = (33, 11) = (11, 0) = 11
+$$
+
+$$
+(105, 385) = (105, 70) = (35, 70) = (35, 0) = 35
+$$
+
+$$
+(245, 193) = (193, 52) = (52, 37) = (37, 15) = (15, 7) = (7, 1) = (1, 0) = 1
+$$
+
 ### 2. Application to the Fundamental Theorem of Arithmetic. 在算术基本定理上的应用
 
 > (Page 47) *Exercise:* The extension of this argument to products of any number $n$ of integers requires the explicit or implicit use of the principle of mathematical induction. Supply the details of this argument.
+
+It has been proven that if a prime $p$ divides a product $ab$, then $p$ must divide $a$ or $b$. This exercise is to prove that if a prime $p$ divides a product $a_1 a_2 \dots a_n$, then $p$ must divide at least one of the $a_i$ where $i$ is an integer between $1$ and $n$.
+
+Suppose the statement is true for $r$, i.e. if a prime $p$ divides a product $a_1 a_2 \dots a_r$, then $p$ must divide at least one of the $a_i$. Then if $p$ divides $(a_1 a_2 \dots a_r) \cdot a_{r+1}$, then $p$ must divide either the product of $a_1 a_2 \dots a_r$, or $a_{r+1}$. Therefore $p$ must divide at least one of the $a_i$ where $i$ is an integer between $1$ and $r+1$.
 
 ### 3. Euler’s $\varphi$ Function. Fermat’s Theorem Again. 欧拉函数 $\varphi$ 再谈费马定理
 
@@ -259,13 +275,31 @@ $$
 kr + al = 1 \implies krb + lab = b \\
 $$
 
-Since $r$ divides $krb$ and $lab$ respectively, $r$ must divide the sum $krb + lab = b$.
+Since $r$ divides $krb$ and $ab$ respectively, $r$ must divide the sum $krb + lab = b$.
 
 > (Page 49) *Exercise:* Using Euler's $\varphi$ function, generalize Fermat's theorem of page 37. The general theorem state: *If* $n$ *is any integer, and* $a$ *is relatively prime to* $n$, *then*
 >
 > $$
 > a^{\varphi(n)} \equiv 1 \pmod{n}.
 > $$
+
+According to the definition of Euler's $\varphi$ function, $n$ has $\varphi(n)$ number of integers from $1$ to $n$ that are relatively prime to $n$. Let these integers be $q_1, q_2, \dotsc, q_{\varphi(n)}$ in ascending order. Consider the multiples of $a$:
+
+$$
+m_1 = q_1 a, m_2 = q_2 a, \dotsc, m_{\varphi(n)} = q_{\varphi(n)} a.
+$$
+
+No two of these integers can be congruent modulo $n$, for then $n$ would be a factor of $m_s - m_r = (q_s - q_r)a$ for some pair of integers $r, s$ with $1 \leq r < s \leq \varphi(n) < n$. But $n$ is neither a factor of $a$ nor a factor of $q_s - q_r$. Likewise, none of these numbers can be congruent to $0$. Besides, since $a$ and $n$ are relatively prime, then any $m_i$'s congruences are also relatively prime to $n$, and no two different $m_i$'s are congruent to each other modulo $n$ (for $m_r \equiv m_s \implies q_r a \equiv q_s a \implies q_r \equiv q_s \implies r = s$). Therefore, the numbers $m_1, m_2, \dotsc, m_{\varphi(n)}$ must be respectively congruent to the numbers $q_1, q_2, \dotsc, q_{\varphi(n)}$, in some arrangement. It follows that
+
+$$
+m_1 m_2 \dots m_{\varphi(n)} = q_1 q_2 \dots q_{\varphi(n)} a^{\varphi(n)} \equiv q_1 q_2 \dots q_{\varphi(n)} \pmod{n},
+$$
+
+or, if for brevity we write $K$ for $q_1 q_2 \dots q_{\varphi(n)}$, knowing that $K$ is not divisible by $n$,
+
+$$
+K a^{\varphi(n)} \equiv K \implies a^{\varphi(n)} \equiv 1 \pmod{n}.
+$$
 
 ### 4. Continued Fractions. Diophantine Equations. 连分数 丢番都方程
 
@@ -283,4 +317,34 @@ $$
 \end{aligned}
 $$
 
-> (Page 51) *Exercise:* Solve the Diophantine equations (a) $3x - 4y = 29$. (b) $11x - 12y = 58$. (c) $153x - 34y = 51$.
+> (Page 51) *Exercise:* Solve the Diophantine equations (a) $3x - 4y = 29$. (b) $11x + 12y = 58$. (c) $153x - 34y = 51$.
+
+$$
+\begin{aligned}
+4 = 1 \cdot 3 + 1 \\
+1 = 4 - 3 \\
+\text{Hence } \quad 3 \cdot (-1) - 4 \cdot (-1) = 1 \\
+3 \cdot (-29) - 4 \cdot (-29) = 29 \\
+\text{General solutions to (a): } x = -29 - 4r, y = -29 - 3r
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+12 = 1 \cdot 11 + 1 \\
+1 = 12 - 11 \\
+\text{Hence } \quad 11 \cdot (-1) + 12 \cdot 1 = 1 \\
+11 \cdot (-58) + 12 \cdot 58 = 58 \\
+\text{General solutions to (b): } x = -58 + 12r, y = 58 - 11r
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+153 = 4 \cdot 34 + 17, \quad 34 = 2 \cdot 17, \quad (153, 34) = 17 \\
+17 = 153 - 4 \cdot 34 \\
+\text{Hence } \quad 153 \cdot 1 - 34 \cdot 4 = 17 \\
+153 \cdot 3 - 34 \cdot 12 = 51 \\
+\text{General solutions to (c): } x = 3 - 2r, y = 12 - 9r
+\end{aligned}
+$$
