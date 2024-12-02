@@ -209,6 +209,32 @@ Since $y \neq x$, and $x, y$ are both among the numbers $1, 2, 3, \dotsc, p-1$, 
 
 > (Page 41) *Exercise:* Prove the last statement.
 
+This exercise is to prove that the formulas
+
+$$
+\begin{aligned}
+a &= v^2 - u^2, \\
+b &= 2uv, \\
+c &= u^2 + v^2,
+\end{aligned}
+$$
+
+for any positive integers $u$ and $v$ with $v > u$, where $u$ and $v$ have no common factor and are not both odd, yield all primitive Pythagorean number triples. It's already proven that $(a, b, c)$ in a Pythagorean number triple are proportional to $v^2 - u^2, 2uv, u^2 + v^2$ respectively. Therefore it's only needed to prove that $a, b, c$ in the formulas above have no common factor.
+
+Since $u$ and $v$ have no common factor, then $u$ and $v$ are not both even, otherwise they have a common factor $2$. Since $u$ and $v$ are not both odd either, then $u + v$ and $u - v$ are both odd.
+
+Besides, since $u$ and $v$ have no common factor, then:
+* $u + v$ has no common factor with $u$ or $v$;
+* $u - v$ has no common factor with $u$ or $v$.
+
+Therefore $v^2 - u^2 = (v+u)(v-u)$ is odd and has no common factor with $u$ or $v$, thus $a = v^2 - u^2$ has no common factor with $b = 2uv$.
+
+Similarly, $(u + v)^2$ is odd and has no common factor with $u$ or $v$. Therefore $b + c = (u + v)^2$ has no common factor with $b = 2uv$, thus $c = u^2 + v^2$ has no common factor with $b = 2uv$.
+
+Finally, $v^2 - u^2 = (v+u)(v-u)$ is odd and has no common factor with $v$. Therefore $a = v^2 - u^2 = (v+u)(v-u)$ has no common factor with $a + c = 2v^2$, thus $a = v^2 - u^2$ has no common factor with $c = u^2 + v^2$.
+
+As a result, $a = v^2 - u^2$, $b = 2uv$, and $c = u^2 + v^2$ have no common factor.
+
 ## § 4. The Euclidean Algorithm. 欧几里得辗转相除法
 
 ### 1. General Theory. 一般理论
@@ -219,7 +245,7 @@ Since $y \neq x$, and $x, y$ are both among the numbers $1, 2, 3, \dotsc, p-1$, 
 
 > (Page 47) *Exercise:* The extension of this argument to products of any number $n$ of integers requires the explicit or implicit use of the principle of mathematical induction. Supply the details of this argument.
 
-### 3. Euler’s $\varphi$ Function. Fermat’s Theorem Again. 欧拉函数$\varphi$ 再谈费马定理
+### 3. Euler’s $\varphi$ Function. Fermat’s Theorem Again. 欧拉函数 $\varphi$ 再谈费马定理
 
 > (Page 48) *Exercise:* Prove the theorem: *If an integer* $r$ *divides a product* $ab$ *and is relatively prime to* $a$, *then* $r$ *must divide* $b$. (Hint: if $r$ is relatively prime to $a$ then we can find integers $k$ and $l$ such that
 >
