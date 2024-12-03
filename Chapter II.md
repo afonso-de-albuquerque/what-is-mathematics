@@ -14,11 +14,21 @@
 
 > (Page 60) *Exercise:* 1\) Prove that $\sqrt[3]2, \sqrt3, \sqrt5, \sqrt[3]3$ are not rational. (Hint: Use the lemma of p. 47).
 
+If $\sqrt[3]2$ were rational, we could find two relatively prime integers $p$ and $q$ such that $\sqrt[3]2 = \frac{p}{q}$. and $p^3 = 2q^3$. Since $2$ appears as a factor of the right side, $p^3$ is an even number, and hence $p$ itself is even. We may write $p = 2r$. Then we have $8r^3 = 2q^3$, or $4r^3 = q^3$. Since $4$ is as a factor of the left side, and hence $q$ must also be even. Thus $p$ and $q$ are both divisible by $2$, which contradicts the assumption that $p$ and $q$ were relatively prime. Therefore $\sqrt[3]2$ is not rational.
+
+If $\sqrt3$ were rational, we could find two relatively prime integers $p$ and $q$ such that $\sqrt3 = \frac{p}{q}$. and $p^2 = 3q^2$. Since $3$ appears as a factor of the right side, $p^2$ is a multiple of $3$, and hence $p$ itself is a multiple of $3$. We may write $p = 3r$. Then we have $9r^2 = 3q^2$, or $3r^2 = q^2$. Since $3$ is as a factor of the left side, and hence $q$ must also be a multiple of $3$. Thus $p$ and $q$ are both divisible by $3$, which contradicts the assumption that $p$ and $q$ were relatively prime. Therefore $\sqrt3$ is not rational.
+
+If $\sqrt5$ were rational, we could find two relatively prime integers $p$ and $q$ such that $\sqrt5 = \frac{p}{q}$. and $p^2 = 5q^2$. Since $5$ appears as a factor of the right side, $p^2$ is a multiple of $5$, and hence $p$ itself is a multiple of $5$. We may write $p = 5r$. Then we have $25r^2 = 5q^2$, or $5r^2 = q^2$. Since $5$ is as a factor of the left side, and hence $q$ must also be a multiple of $5$. Thus $p$ and $q$ are both divisible by $5$, which contradicts the assumption that $p$ and $q$ were relatively prime. Therefore $\sqrt5$ is not rational.
+
+If $\sqrt[3]3$ were rational, we could find two relatively prime integers $p$ and $q$ such that $\sqrt[3]3 = \frac{p}{q}$. and $p^3 = 3q^3$. Since $3$ appears as a factor of the right side, $p^3$ is a multiple of $3$, and hence $p$ itself is a multiple of $3$. We may write $p = 3r$. Then we have $27r^3 = 3q^3$, or $9r^3 = q^3$. Since $3$ is as a factor of the left side, and hence $q$ must also be a multiple of $3$. Thus $p$ and $q$ are both divisible by $3$, which contradicts the assumption that $p$ and $q$ were relatively prime. Therefore $\sqrt[3]3$ is not rational.
+
 > 2\) Prove that $\sqrt2 + \sqrt3$ and $\sqrt2 + \sqrt[3]2$ are not rational. (Hint: if e.g. the first of these numbers were equal to a rational number $r$ then, writing $\sqrt3 = r - \sqrt2$ and squaring, $\sqrt2$ would be rational.)
 
-> 3\) Prove that $\sqrt2 + \sqrt3 + \sqrt5$ is irrational. Try to make up similar and more general examples.
+Let $r = \sqrt2 + \sqrt3$. If $r$ were rational, then we have: $\sqrt3 = r - \sqrt2$. Squaring both sides, we get: $3 = (r - \sqrt2)^2 = r^2 - 2\sqrt2r + 2$. Rearranging the equation, we get: $\sqrt2 = \frac{r^2 - 1}{2r}$. Thus $\sqrt2$ is rational, which is a contradiction. Therefore $\sqrt2 + \sqrt3$ is not rational.
 
-### 2. Decimal Fractions. Infinite Decimals. 十进位小数 无穷小数
+Let $r = \sqrt2 + \sqrt[3]2$. If $r$ were rational, then we have: $\sqrt[3]2 = r - \sqrt2$. Cubing both sides, we get: $2 = (r - \sqrt2)^3 = r^3 - 3\sqrt2r^2 + 6r - 2\sqrt2$. Rearranging the equation, we get: $\sqrt2 = \frac{r^3 + 6r - 2}{3r^2 + 2}$. Thus $\sqrt2$ is rational, which is a contradiction. Therefore $\sqrt2 + \sqrt[3]2$ is not rational.
+
+> 3\) Prove that $\sqrt2 + \sqrt3 + \sqrt5$ is irrational. Try to make up similar and more general examples.
 
 > (Page 63) *Exercise:* Calculate $\sqrt[3]2$ and $\sqrt[3]5$ with an accuracy of at least $10^{-2}$.
 
