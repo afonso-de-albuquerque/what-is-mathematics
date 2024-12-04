@@ -33,23 +33,24 @@ Let $r = \sqrt2 + \sqrt[3]2$. If $r$ were rational, then we have: $\sqrt[3]2 = r
 
 > 3\) Prove that $\sqrt2 + \sqrt3 + \sqrt5$ is irrational. Try to make up similar and more general examples.
 
-Let $r = \sqrt2 + \sqrt3 + \sqrt5$, we have:
+Let $r = \sqrt{n_1} + \sqrt{n_2} + \sqrt{n_3}$, where $n_1, n_2, n_3$ are positive integers and not perfect squares. We have:
 
 $$
 \begin{aligned}
-\sqrt2 + \sqrt3 &= \sqrt5 - r \\
-(\sqrt2 + \sqrt3)^2 &= (\sqrt5 - r)^2 \\
-5 + 2\sqrt6 &= 5 - 2r\sqrt5 + r^2 \\
-2\sqrt6 &= r^2 - 2r\sqrt5 \\
-(2\sqrt6)^2 &= (r^2 - 2r\sqrt5)^2 \\
-24 &= r^4 - 4r^3\sqrt5 + 20r^2 \\
-\sqrt5 &= \frac{r^4 + 20r^2 - 24}{4r^3} \\
+\sqrt{n_1} + \sqrt{n_2} &= \sqrt{n_3} - r \\
+(\sqrt{n_1} + \sqrt{n_2})^2 &= (\sqrt{n_3} - r)^2 \\
+n_1 + n_2 + 2\sqrt{n_1n_2} &= n_3 - 2r\sqrt{n_3} + r^2 \\
+2\sqrt{n_1n_2} &= r^2 - 2r\sqrt{n_3} + n_3 - n_1 - n_2 \\
+(2\sqrt{n_1n_2})^2 &= \left((r^2 + n_3 - n_1 - n_2) - 2r\sqrt{n_3}\right)^2 \\
+4n_1n_2 &= (r^2 + n_3 - n_1 - n_2)^2 - 4r(r^2 + n_3 - n_1 - n_2)\sqrt{n_3} + 4r^2n_3 \\
+4r(r^2 + n_3 - n_1 - n_2)\sqrt{n_3} &= (r^2 + n_3 - n_1 - n_2)^2 + 4r^2n_3 - 4n_1n_2 \\
+\sqrt{n_3} &= \frac{(r^2 + n_3 - n_1 - n_2)^2 + 4r^2n_3 - 4n_1n_2}{4r(r^2 + n_3 - n_1 - n_2)}
 \end{aligned}
 $$
 
-Thus $\sqrt5$ is rational, which is a contradiction. Therefore $\sqrt2 + \sqrt3 + \sqrt5$ is irrational.
+If $r$ were rational, then $\sqrt{n_3}$ would be rational, which is a contradiction to exercise 1. Therefore $\sqrt{n_1} + \sqrt{n_2} + \sqrt{n_3}$ is irrational if $n_1, n_2, n_3$ are positive integers and not perfect squares.
 
-Similarly, we can assert that the sum of $\sqrt{n_1} + \sqrt{n_2} + \sqrt{n_3}$ is irrational if $n_1, n_2, n_3$ are positive integers and not perfect squares.
+As a particular case, $\sqrt2 + \sqrt3 + \sqrt5$ is irrational.
 
 ### 2. Decimal Fractions. Infinite Decimals. 十进位小数 无穷小数
 
@@ -75,7 +76,21 @@ $$
 
 > (Page 66) *Exercise:* 1\) Prove that $1 - q + q^2 - q^3 + \dots = \frac{1}{1 + q}$, if $|q| < 1$.
 
+Since $|q| < 1$, then $-1 < q < 1$ and $-1 < -q < 1$. Therefore:
+
+$$
+\begin{aligned}
+1 - q + q^2 - q^3 + \dots &= 1 + (-q) + (-q)^2 + (-q)^3 + \dots \\
+&= \frac{1}{1 - (-q)} \\
+&= \frac{1}{1 + q}
+\end{aligned}
+$$
+
 > 2\) What is the limit of the sequence $a_1, a_2, a_3, \dots$, where $a_n = n/(n+1)$? (Hint: Write the expression in the form $n/(n+1) = 1 - 1/(n+1)$ and observe that the second term tends to zero).
+
+$$
+\lim_{n \to \infty} \frac{n}{n+1} = \lim_{n \to \infty} \left(1 - \frac{1}{n+1}\right) = 1
+$$
 
 > 3\) What is the limit of $\frac{n^2+n+1}{n^2-n+1}$ for $n \to \infty$? (Hint: Write the expression in the form
 >
@@ -83,7 +98,31 @@ $$
 > \frac{1+\frac{1}{n}+\frac{1}{n^2}}{1-\frac{1}{n}+\frac{1}{n^2}}.)
 > $$
 
+$$
+\lim_{n \to \infty} \frac{n^2+n+1}{n^2-n+1} = \lim_{n \to \infty} \frac{1+\frac{1}{n}+\frac{1}{n^2}}{1-\frac{1}{n}+\frac{1}{n^2}} = \frac{1}{1} = 1
+$$
+
 > 4\) Prove, for $|q| < 1$, that $1 + 2q + 3q^2 + 4q^3 + \dots = \frac{1}{(1-q)^2}$. (Hint: Use the result of exercise 3 on p.18.)
+
+Firstly, it's easy to prove but essential to notice that $\lim_{n \to \infty} nq^n = 0$ for $|q| < 1$. 
+Exercise 3 on page 18 show that $1 + 2q + 3q^2 + \dots + nq^{n-1} = \frac{1-(n+1)q^n+nq^{n+1}}{(1-q)^2}$.
+
+$$
+\lim_{n \to \infty} \frac{1-(n+1)q^n+nq^{n+1}}{(1-q)^2} = \frac{1}{(1-q)^2}
+$$
+
+Or, we can let $S_n = 1 + 2q + 3q^2 + \dots + nq^{n-1}$.
+
+$$
+\begin{aligned}
+S_n &= 1 + 2q + 3q^2 + \dots + nq^{n-1} \\
+qS_n &= q + 2q^2 + 3q^3 + \dots + nq^n \\
+(1 - q)S_n &= 1 + q + q^2 + \dots + q^{n-1} - nq^n \\
+&= \frac{1-q^n}{1-q} - nq^n \\
+S_n &= \frac{1-q^n}{(1-q)^2} - \frac{nq^n}{1-q} \\
+\lim_{n \to \infty} S_n &= \frac{1}{(1-q)^2}
+\end{aligned}
+$$
 
 > 5\) What is the limit of the infinite series
 >
@@ -91,7 +130,42 @@ $$
 > 1 - 2q + 3q^2 - 4q^3 + \dots \quad?
 > $$
 
+$$
+\begin{aligned}
+1 - 2q + 3q^2 - 4q^3 + \dots &= 1 + 2(-q) + 3(-q)^2 + 4(-q^3) + \dots \\
+&= \frac{1}{\left(1+(-q)\right)^2} \\
+&= \frac{1}{(1+q)^2}
+\end{aligned}
+$$
+
 > 6\) What is the limit of $\frac{1+2+3+\dots+n}{n^2}$, of $\frac{1^2+2^2+3^2+\dots+n^2}{n^3}$, and of $\frac{1^3+2^3+3^3+\dots+n^3}{n^4}$? (Hint: Use the results of pp. 12, 14, 15.)
+
+$$
+\begin{aligned}
+\lim_{n \to \infty} \frac{1+2+3+\dots+n}{n^2} &= \lim_{n \to \infty} \frac{n(n+1)/2}{n^2} \\
+&= \lim_{n \to \infty} \frac{n^2+n}{2n^2} \\
+&= \lim_{n \to \infty} \left(\frac{1}{2}+\frac{1}{2n}\right) \\
+&= \frac{1}{2}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\lim_{n \to \infty} \frac{1^2+2^2+3^2+\dots+n^2}{n^3} &= \lim_{n \to \infty} \frac{n(n+1)(2n+1)/6}{n^3} \\
+&= \lim_{n \to \infty} \frac{2n^3+3n^2+n}{6n^3} \\
+&= \lim_{n \to \infty} \left(\frac{1}{3}+\frac{1}{2n}+\frac{1}{6n^2}\right) \\
+&= \frac{1}{3}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\lim_{n \to \infty} \frac{1^3+2^3+3^3+\dots+n^3}{n^4} &= \lim_{n \to \infty} \frac{n^2(n+1)^2/4}{n^4} \\
+&= \lim_{n \to \infty} \frac{(n+1)^2}{4n^2} \\
+&= \lim_{n \to \infty} \left(\frac{1}{4}+\frac{1}{2n}+\frac{1}{4n^2}\right) \\
+&= \frac{1}{4}
+\end{aligned}
+$$
 
 ### 4. Rational Numbers and Periodic Decimals. 有理数和循环小数
 
