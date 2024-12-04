@@ -14,13 +14,16 @@
 
 > (Page 60) *Exercise:* 1\) Prove that $\sqrt[3]2, \sqrt3, \sqrt5, \sqrt[3]3$ are not rational. (Hint: Use the lemma of p. 47).
 
-If $\sqrt[3]2$ were rational, we could find two relatively prime integers $p$ and $q$ such that $\sqrt[3]2 = \frac{p}{q}$. and $p^3 = 2q^3$. Since $2$ appears as a factor of the right side, $p^3$ is an even number, and hence $p$ itself is even. We may write $p = 2r$. Then we have $8r^3 = 2q^3$, or $4r^3 = q^3$. Since $4$ is as a factor of the left side, and hence $q$ must also be even. Thus $p$ and $q$ are both divisible by $2$, which contradicts the assumption that $p$ and $q$ were relatively prime. Therefore $\sqrt[3]2$ is not rational.
+To generalize, I assert that if $n$ is a positive integer and not a perfect $m$-th power, then $\sqrt[m]{n}$ is irrational. Here's the proof:
 
-If $\sqrt3$ were rational, we could find two relatively prime integers $p$ and $q$ such that $\sqrt3 = \frac{p}{q}$. and $p^2 = 3q^2$. Since $3$ appears as a factor of the right side, $p^2$ is a multiple of $3$, and hence $p$ itself is a multiple of $3$. We may write $p = 3r$. Then we have $9r^2 = 3q^2$, or $3r^2 = q^2$. Since $3$ is as a factor of the left side, and hence $q$ must also be a multiple of $3$. Thus $p$ and $q$ are both divisible by $3$, which contradicts the assumption that $p$ and $q$ were relatively prime. Therefore $\sqrt3$ is not rational.
+If $\sqrt[m]{n}$ were rational, we could find two relatively prime integers $r$ and $s$ such that $\sqrt[m]{n} = r / s$, and $r^m = n s^m$. Consider the prime factorization of $n$, $r^m$ and $s^m$ in this equation:
 
-If $\sqrt5$ were rational, we could find two relatively prime integers $p$ and $q$ such that $\sqrt5 = \frac{p}{q}$. and $p^2 = 5q^2$. Since $5$ appears as a factor of the right side, $p^2$ is a multiple of $5$, and hence $p$ itself is a multiple of $5$. We may write $p = 5r$. Then we have $25r^2 = 5q^2$, or $5r^2 = q^2$. Since $5$ is as a factor of the left side, and hence $q$ must also be a multiple of $5$. Thus $p$ and $q$ are both divisible by $5$, which contradicts the assumption that $p$ and $q$ were relatively prime. Therefore $\sqrt5$ is not rational.
+* $n$ can be factored into a product of primes: $n = p_1^{e_1} p_2^{e_2} \cdots p_k^{e_k}$. Since $n$ is not a perfect $m$-th power, at least one of the exponents $e_i$ is not divisible by $m$.
+* Both $r^m$ and $s^m$ are perfect $m$-th powers, hence their prime factorizations contain only exponents that are divisible by $m$.
 
-If $\sqrt[3]3$ were rational, we could find two relatively prime integers $p$ and $q$ such that $\sqrt[3]3 = \frac{p}{q}$. and $p^3 = 3q^3$. Since $3$ appears as a factor of the right side, $p^3$ is a multiple of $3$, and hence $p$ itself is a multiple of $3$. We may write $p = 3r$. Then we have $27r^3 = 3q^3$, or $9r^3 = q^3$. Since $3$ is as a factor of the left side, and hence $q$ must also be a multiple of $3$. Thus $p$ and $q$ are both divisible by $3$, which contradicts the assumption that $p$ and $q$ were relatively prime. Therefore $\sqrt[3]3$ is not rational.
+Therefore, after prime factorization the left side of the equation has only exponents that are divisible by $m$, while the right side has at least one exponent that is not divisible by $m$. This is a contradiction. Therefore $\sqrt[m]{n}$ is not rational.
+
+As particular cases, $\sqrt[3]2, \sqrt3, \sqrt5, \sqrt[3]3$ are not rational.
 
 > 2\) Prove that $\sqrt2 + \sqrt3$ and $\sqrt2 + \sqrt[3]2$ are not rational. (Hint: if e.g. the first of these numbers were equal to a rational number $r$ then, writing $\sqrt3 = r - \sqrt2$ and squaring, $\sqrt2$ would be rational.)
 
@@ -30,7 +33,43 @@ Let $r = \sqrt2 + \sqrt[3]2$. If $r$ were rational, then we have: $\sqrt[3]2 = r
 
 > 3\) Prove that $\sqrt2 + \sqrt3 + \sqrt5$ is irrational. Try to make up similar and more general examples.
 
+Let $r = \sqrt2 + \sqrt3 + \sqrt5$, we have:
+
+$$
+\begin{aligned}
+\sqrt2 + \sqrt3 &= \sqrt5 - r \\
+(\sqrt2 + \sqrt3)^2 &= (\sqrt5 - r)^2 \\
+5 + 2\sqrt6 &= 5 - 2r\sqrt5 + r^2 \\
+2\sqrt6 &= r^2 - 2r\sqrt5 \\
+(2\sqrt6)^2 &= (r^2 - 2r\sqrt5)^2 \\
+24 &= r^4 - 4r^3\sqrt5 + 20r^2 \\
+\sqrt5 &= \frac{r^4 + 20r^2 - 24}{4r^3} \\
+\end{aligned}
+$$
+
+Thus $\sqrt5$ is rational, which is a contradiction. Therefore $\sqrt2 + \sqrt3 + \sqrt5$ is irrational.
+
+Similarly, we can assert that the sum of $\sqrt{n_1} + \sqrt{n_2} + \sqrt{n_3}$ is irrational if $n_1, n_2, n_3$ are positive integers and not perfect squares.
+
+### 2. Decimal Fractions. Infinite Decimals. 十进位小数 无穷小数
+
 > (Page 63) *Exercise:* Calculate $\sqrt[3]2$ and $\sqrt[3]5$ with an accuracy of at least $10^{-2}$.
+
+$$
+\begin{aligned}
+1^3 = 1 &< 2 < 2^3 = 8 \\
+1.2^3 = 1.728 &< 2 < 1.3^3 = 2.197 \\
+1.25^3 = 1.953125 &< 2 < 1.26^3 = 2.000376
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+1^3 = 1 &< 5 < 2^3 = 8 \\
+1.7^3 = 4.913 &< 5 < 1.8^3 = 5.832 \\
+1.70^3 = 4.913 &< 5 < 1.71^3 = 5.000211
+\end{aligned}
+$$
 
 ### 3. Limits. Infinite Geometrical Series. 极限 无穷等比级数
 
