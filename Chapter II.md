@@ -169,7 +169,18 @@ $$
 
 ### 4. Rational Numbers and Periodic Decimals. 有理数和循环小数
 
-> (Page 67~68) *Exercise:* 1\) Expand the fractions $\frac{1}{1}$, $\frac{1}{13}$, $\frac{2}{13}$, $\frac{3}{13}$, $\frac{1}{17}$, $\frac{2}{17}$ into decimal fractions and determine the period.
+> (Page 67~68) *Exercise:* 1\) Expand the fractions $\frac{1}{11}$, $\frac{1}{13}$, $\frac{2}{13}$, $\frac{3}{13}$, $\frac{1}{17}$, $\frac{2}{17}$ into decimal fractions and determine the period.
+
+$$
+\begin{aligned}
+\frac{1}{11} &= 0.\overline{09} \\
+\frac{1}{13} &= 0.\overline{076923} \\
+\frac{2}{13} &= 0.\overline{153846} \\
+\frac{3}{13} &= 0.\overline{230769} \\
+\frac{1}{17} &= 0.\overline{0588235294117647} \\
+\frac{2}{17} &= 0.\overline{1176470588235294}
+\end{aligned}
+$$
 
 > *2\) The number $142,857$ has the property that multiplication with any one of the numbers $2, 3, 4, 5,$ or $6$ produces only a cyclic permutation of its digits. Explain this property, using the expansion of $\frac{1}{7}$ into a decimal fraction.
 
