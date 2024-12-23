@@ -201,9 +201,51 @@ To generalize, if a digital period of $1/p$ is $p-1$, where $p$ is a prime numbe
 
 > 3\) Expand the rational numbers of exercise 1 as "decimals" with bases $5, 7,$ and $12$.
 
+$$
+\begin{aligned}
+\frac{1_{10}}{11_{10}} &= 0.\overline{02114}_{5} = 0.\overline{0431162355}_{7} = 0.\overline{1}_{12} \\
+\frac{1_{10}}{13_{10}} &= 0.\overline{0143}_{5} = 0.\overline{035245631421}_{7} = 0.\overline{0B}_{12} \\
+\frac{2_{10}}{13_{10}} &= 0.\overline{0341}_{5} = 0.\overline{103524563142}_{7} = 0.\overline{1A}_{12} \\
+\frac{3_{10}}{13_{10}} &= 0.\overline{1034}_{5} = 0.\overline{142103524563}_{7} = 0.\overline{29}_{12} \\
+\frac{1_{10}}{17_{10}} &= 0.\overline{0121340243243104}_{5} = 0.\overline{0261143464055232}_{7} = 0.\overline{08579214B36429A7}_{12} \\
+\frac{2_{10}}{17_{10}} &= 0.\overline{0243231042012134}_{5} = 0.\overline{0552320261143464}_{7} = 0.\overline{14B36429A7085792}_{12}
+\end{aligned}
+$$
+
 > 4\) Expand one-third as a dyadic number.
 
+$$
+\frac{1}{3} = 0.\overline{01}_{2}
+$$
+
 > 5\) Write $.11212121\dots$ as a fraction. Find the value of this symbol if it is meant in the systems with the bases $3$ or $5$.
+
+$$
+\begin{aligned}
+0.1\overline{12}_{10} &= 0.1 + 0.0\overline{11} + 0.0\overline{01} \\
+&= \frac{1}{10} + \frac{1}{90} + \frac{1}{990} \\
+&= \frac{99}{990} + \frac{11}{990} + \frac{1}{990} = \frac{111}{990} \\
+&= \frac{37}{330}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+0.1\overline{12}_{3} &= 0.1_3 + 0.0\overline{11}_3 + 0.0\overline{01}_3 \\
+&= \frac{1}{10_3} + \frac{1}{20_3} + \frac{1}{220_3} \\
+&= \frac{22_3}{220_3} + \frac{11_3}{220_3} + \frac{1_3}{220_3} = \frac{111_3}{220_3} \\
+&= \frac{13}{24}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+0.1\overline{12}_{5} &= 0.1_5 + 0.0\overline{11}_5 + 0.0\overline{01}_5 \\
+&= \frac{1}{10_5} + \frac{1}{40_5} + \frac{1}{440_5} \\
+&= \frac{44_5}{440_5} + \frac{11_5}{440_5} + \frac{1_5}{440_5} = \frac{111_5}{440_5} \\
+&= \frac{31}{120}
+\end{aligned}
+$$
 
 ### 5. General Definition of Irrational Numbers by Nested Intervals. 用区间套给出无理数的一般定义
 
