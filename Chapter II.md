@@ -184,6 +184,21 @@ $$
 
 > *2\) The number $142,857$ has the property that multiplication with any one of the numbers $2, 3, 4, 5,$ or $6$ produces only a cyclic permutation of its digits. Explain this property, using the expansion of $\frac{1}{7}$ into a decimal fraction.
 
+$$
+\begin{aligned}
+\frac{1}{7} &= 0.\overline{142857} \\
+\frac{2}{7} &= 0.\overline{285714} \\
+\frac{3}{7} &= 0.\overline{428571} \\
+\frac{4}{7} &= 0.\overline{571428} \\
+\frac{5}{7} &= 0.\overline{714285} \\
+\frac{6}{7} &= 0.\overline{857142}
+\end{aligned}
+$$
+
+We can see that when multiplying $142,857$ with $2, 3, 4, 5, 6$, the result is a cyclic permutation of the digits of $142,857$.
+
+To generalize, if a digital period of $1/p$ is $p-1$, where $p$ is a prime number, then the digits represent a cyclic number.
+
 > 3\) Expand the rational numbers of exercise 1 as "decimals" with bases $5, 7,$ and $12$.
 
 > 4\) Expand one-third as a dyadic number.
