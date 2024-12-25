@@ -265,6 +265,42 @@ $$
 
 > (Page 80~81) *Exercise:* 1\) Show that the set of all positive and negative integers is denumerable. Show that the set of all positive and negative rational numbers is denumerable.
 
+We can define a function that maps the set of all positive integers to the set of all positive and negative integers as follows:
+
+$$
+f(n) = \lceil \frac{n}{2} \rceil (-1)^n.
+$$
+
+The mapping produces a correspondence
+
+$$
+\begin{aligned}
+&1 & &2 & &3 & &4 & &\dots & 2&n & 2&n+1 &\dots \\
+&\updownarrow & &\updownarrow & &\updownarrow & &\updownarrow & & & &\updownarrow & &\updownarrow \\
+-&1 & &1 & -&2 & &2 & &\dots & -&n & &n &\dots
+\end{aligned}
+$$
+
+which is biunique. Therefore, the set of all positive and negative integers is denumerable.
+
+Earlier we've already showed that the set of positive rational numbers is denumerable by obtaining a sequence of $a/b$ where $a$ and $b$ are integers. The sequence looks like this after cancelling all those $a$ and $b$ with common factors:
+
+$$
+\begin{aligned}
+1, 2, \frac{1}{2}, \frac{1}{3}, 3, 4, \frac{3}{2}, \frac{2}{3}, \frac{1}{4}, \frac{1}{5}, 5, \dots.
+\end{aligned}
+$$
+
+Similarly, we can show that the set of negative rational numbers is also denumerable by obtaining the same sequence but with negative signs:
+
+$$
+\begin{aligned}
+-1, -2, -\frac{1}{2}, -\frac{1}{3}, -3, -4, -\frac{3}{2}, -\frac{2}{3}, -\frac{1}{4}, -\frac{1}{5}, -5, \dots.
+\end{aligned}
+$$
+
+Finally, we can obtain a new sequence by the following rule: (1) the $n$-th element of the sequence is the $\frac{n+1}{2}$-th element of the positive rational numbers sequence if $n$ is odd; and (2) the $n$-th element of the sequence is the $\frac{n}{2}$-th element of the negative rational numbers sequence if $n$ is even. This new sequence contains each positive and negative rational number once and only once. Therefore, the set of all positive and negative rational numbers is denumerable.
+
 > 2\) Show that the set $S + T$ (see p. 110) is denumerable if $S$ and $T$ are denumerable sets. Show the same for the sum of three, four, or any number, $n$, of sets, and finally for a set composed of denumerably many denumerable sets.
 
 > (Page 82) *Exercose:* Show that any interval $[A, B]$ of the number axis is equivalent to any other interval $[C, D]$.
