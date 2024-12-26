@@ -257,10 +257,10 @@ G_n &= a\frac{1-q^n}{1-q} \quad \text{if } q \neq 1 \\
 a &= \frac{1}{1+x^2}, \quad q = \frac{1}{1+x^2} \quad (x \neq 0) \\
 G_n &= \frac{1}{1+x^2}\frac{1-\left(\frac{1}{1+x^2}\right)^n}{1-\frac{1}{1+x^2}} = \frac{1}{x^2}\left(1 - \frac{1}{(1+x^2)^n}\right) \\
 &= \frac{(1+x^2)^n-1}{x^2(1+x^2)^n} \quad (x \neq 0) \\
-G_n &= \left\lbrace\begin{array}{lc}
-\frac{(1+x^2)^n-1}{x^2(1+x^2)^n} & \text{if } x \neq 0 \\
-n & \text{if } x = 0
-\end{array}\right.
+G_n &= \begin{cases}
+& \frac{(1+x^2)^n-1}{x^2(1+x^2)^n} & \text{if } x \neq 0 \\
+& n & \text{if } x = 0
+\end{cases}
 \end{aligned}
 $$
 
@@ -284,10 +284,10 @@ a &= \frac{x^2-y^2}{x^2+y^2}, \quad q = \frac{x^2-y^2}{x^2+y^2} \quad (y \neq 0)
 G_n &= \frac{\frac{x^2-y^2}{x^2+y^2}\left(1-\left(\frac{x^2-y^2}{x^2+y^2}\right)^n\right)}{1-\frac{x^2-y^2}{x^2+y^2}} \\
 &= \frac{(x^2+y^2)^n(x^2-y^2)-(x^2-y^2)^n}{(x^2+y^2)^n(x^2+y^2-x^2+y^2)} \\
 &= \frac{(x^2+y^2)^n(x^2-y^2)-(x^2-y^2)^n}{2y^2(x^2+y^2)^n} \quad (y \neq 0) \\
-G_n &= \left\lbrace\begin{array}{lc}
-\frac{(x^2+y^2)^n(x^2-y^2)-(x^2-y^2)^n}{2y^2(x^2+y^2)^n} & \text{if } y \neq 0 \\
-n & \text{if } y = 0
-\end{array}\right.
+G_n &= \begin{cases}
+& \frac{(x^2+y^2)^n(x^2-y^2)-(x^2-y^2)^n}{2y^2(x^2+y^2)^n} & \text{if } y \neq 0 \\
+& n & \text{if } y = 0
+\end{cases}
 \end{aligned}
 $$
 
